@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #config {
+                min-width: 120px;
+            }
+            .title {
+                font-size: 18px;
+            }
+            .content-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-self: flex-start;
+                gap: 4px;
+            }
+            .content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="config">
+            <h1 class="title">Application Configuration</h1>
+            <div class="content-wrapper">
+                <div class="content">
+                    <b>Hostname: </b><span id="host"></span>
+                </div>
+                <div class="content">
+                    <b>Company: </b><span id="company"></span>
+                </div>
+                <div class="content">
+                    <b>Application id: </b><span id="id"></span>
+                </div>
+                <div class="content">
+                    <b>Token: </b><span id="token"></span>
+                </div>
+            </div>
+        </div>
+        <div id="id1"></div>
+        <script src="popup.js"></script>
+    </body>
+</html>

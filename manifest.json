@@ -1,0 +1,27 @@
+{
+    "name": "[gofynd] Get Application Config",
+    "version": "1.0",
+    "description": "Get Application Config",
+    "permissions": ["tabs", "activeTab"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": ["script.js"],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "32": "images/icon32.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "manifest_version": 2
+  }
