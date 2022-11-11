@@ -34,7 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     ["token__copy", "application__copy"].forEach((element) => {
         document.getElementById(element).addEventListener('click', (event) => {
-            console.log('target', event.target.id);
             switch(event.target.id) {
                 case "application__copy": 
                     copyContentToClipboard(document.getElementById("application").innerText);

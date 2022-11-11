@@ -11,8 +11,6 @@ injectScript(chrome.extension.getURL('script.js'), 'body');
 
 window.addEventListener("message", function(event) {
     if(event.data.type && (event.data.type === 'GET_APP_CONFIG')) {
-        // Remove below comment
-        console.log('config data', event.data);
         chrome.runtime.sendMessage(
             {config: event.data.config}
         )
