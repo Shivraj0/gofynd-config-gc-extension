@@ -3,43 +3,82 @@
     <head>
         <style>
             #config {
-                min-width: 120px;
+                width: 500px;
+                padding: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
             .title {
                 font-size: 18px;
+                padding-top: 10px;
+                margin: 0;
             }
             .content-wrapper {
                 display: flex;
                 flex-direction: column;
-                align-self: flex-start;
+                align-self: flex-end;
+                width: -webkit-fill-available;
                 gap: 4px;
             }
             .content {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding-top: 10px;
+            }
+            .field {
+                font-size: 16px;
+                width: 30%;
+                text-align: left;
+            }
+            .field__value {
+                font-size: 16px;
+                width: 70%;
+                text-align: right;
+            }
+            .token-field__value, .company-field__value {
+                display: flex;
+                align-items: center;
+                justify-content: right;
+            }
+            #token, #application {
+                padding-right: 10px;
+            }
+            #token__copy, #application__copy {
+                cursor: pointer;
+            }
+            .footer-info {
+                margin: 0;
+                padding-top: 20px;
+                align-self: end;
+            }
+            .footer-info a {
+                text-decoration: none;
             }
         </style>
     </head>
     <body>
         <div id="config">
-            <h1 class="title">Application Configuration</h1>
+            <img id="appLogo" src="" width="50" title="" alt="" />
+            <h1 id="title" class="title"></h1>
             <div class="content-wrapper">
                 <div class="content">
-                    <b>Hostname: </b><span id="host"></span>
+                    <b class="field">Hostname: </b><span class="field__value" id="host"></span>
                 </div>
                 <div class="content">
-                    <b>Company: </b><span id="company"></span>
+                    <b class="field">Company: </b><span id="company" class="field__value"></span>
                 </div>
                 <div class="content">
-                    <b>Application id: </b><span id="id"></span>
+                    <b class="field">Application id: </b><span class="field__value company-field__value"><span id="application"></span><img id="application__copy" src="/images/copy.png" alt="Copy Text" height="22" width="22" title="Copy Token" /></span>
                 </div>
                 <div class="content">
-                    <b>Token: </b><span id="token"></span>
+                    <b class="field">Token: </b><span class="field__value token-field__value"><span id="token"></span><img id="token__copy" src="/images/copy.png" alt="Copy Text" height="22" width="22" title="Copy Token" /></span>
                 </div>
             </div>
+            <p class="footer-info">Report a bug ? Visit <a href="https://github.com/Shivraj0/gofynd-config-gc-extension" title="Github Link" target="_blank">here</a>.</p>
         </div>
-        <div id="id1"></div>
         <script src="popup.js"></script>
     </body>
 </html>
