@@ -1,6 +1,6 @@
 function parseConfigData() {
     let main = {};
-    main.config = JSON.parse(JSON.stringify(window.config)) || null;
+    main.config = JSON.parse(JSON.stringify(window.config || {})) || null;
     return main;
 }
 let config = parseConfigData();
